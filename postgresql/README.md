@@ -4,7 +4,7 @@ PostgreSQL, often simply "Postgres", is an object-relational database management
 
 ## HOW TO USE
 
-### Execite the postgres instance
+### Execute the postgres instance
 
 Build and Run the project with one of the follows commands (with docker-compose commands):
 

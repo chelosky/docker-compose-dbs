@@ -18,6 +18,7 @@ docker-compose -f docker-compose.yml up -d
 - Username: `admin`
 - Password: `passpass`
 - Database: `sylphrena`
+- Port: `5432`
 
 ## Environment Variables 
 

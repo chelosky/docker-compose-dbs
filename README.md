@@ -14,3 +14,4 @@ To use these files, you must first have the following installed:
 | Database | Folder |
 | -- | -- |
 | PostgreSQL | [postgresql](https://github.com/chelosky/docker-compose-dbs/tree/main/postgresql)  |
+| SQL Server | [mssqlserver](https://github.com/chelosky/docker-compose-dbs/tree/main/mssql-server)  |

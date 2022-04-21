@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:latest
+    container_name: sqlserver
+    ### Is necessary to specify the user as a root, because we need the permissions to copy files into the container
+    ### More info: https://stackoverflow.com/questions/65601077/unable-to-run-sql-server-2019-docker-with-volumes-and-get-error-setup-failed-co
+    user: root
+    volumes:
+      - db:/var/opt/mssql/data
+    ports:
+      - 1433:1433
+    environment:
+      ### Confirms your acceptance of the End-User Licensing Agreement. (always Y)
+      ACCEPT_EULA: Y
+      ### Is the database system administrator (userid = 'sa') password used to connect to SQL Server once the container is running. 
+      ### Important note: This password needs to include at least 8 characters of at least three of these four categories: uppercase letters, lowercase letters, numbers and non-alphanumeric symbols.
+      SA_PASSWORD: FirstIdeal1
+      ### Is the Product ID (PID) or Edition that the container will run with. Acceptable values: Developer, Express, Standard, Enterprise or EnterpriseCore
+      MSSQL_PID: Developer
+volumes:
+  db:
+    driver: local

@@ -15,3 +15,5 @@ To use these files, you must first have the following installed:
 | -- | -- |
 | PostgreSQL | [postgresql](https://github.com/chelosky/docker-compose-dbs/tree/main/postgresql)  |
 | SQL Server | [mssqlserver](https://github.com/chelosky/docker-compose-dbs/tree/main/mssql-server)  |
+| MongoDB | [mongodb](https://github.com/chelosky/docker-compose-dbs/tree/main/mongodb)  |
+| MySQL | [mysql](https://github.com/chelosky/docker-compose-dbs/tree/main/mysql)  |

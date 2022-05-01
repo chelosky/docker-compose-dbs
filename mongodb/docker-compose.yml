@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  db:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - 27017:27017
+    environment: 
+      ### These variables, used in conjunction, create a new user and set that user's password. This user is created in the admin authentication database and given the role of root, which is a "superuser" role
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: passpass
+      ### This variable allows you to specify the name of a database to be used for creation scripts in /docker-entrypoint-initdb.d/*.js (see Initializing a fresh instance below). MongoDB is fundamentally designed for "create on first use", so if you do not insert data with your JavaScript files, then no database is created.
+      MONGO_INITDB_DATABASE: adolin
+    volumes: 
+      - db:/data/db
+volumes:
+  db:
+    driver: local
